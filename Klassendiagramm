@@ -1,0 +1,40 @@
+@startuml
+
+title SE-Projekt - Class Diagram
+
+class Einkausliste
+{
+einkaufsliste[Produkt]
+listeLaden()
+listeErstellen(name)
+produktHinzufuegen(Produkt)
+listeSpeichern(name)
+listeLoeschen(name)
+}
+
+class Produkt
+{
+name
+Position
+kategorie
+produktLaden()
+}
+
+class Supermarkt
+{
+grundriss
+supermarktLaden()
+}
+
+class Position
+{
+regal
+spalte
+}
+
+class Main
+{
+navigationStarten(Einkaufsliste, Supermarkt)
+}
+
+@enduml
