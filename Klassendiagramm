@@ -2,40 +2,49 @@
 
 title SE-Projekt - Class Diagram
 
-class Einkausliste
+class Shoppinglist
 {
-einkaufsliste[Produkt]
-listeLaden()
-listeErstellen(name)
-produktHinzufuegen(Produkt)
-listeSpeichern(name)
-listeLoeschen(name)
+listofProducts[Produt]
+loadList(String name)
+createList(Supermarket supermarket)
+saveList()
+deleteList(String nane)
+addProduct(Product newProduct)
+deleteProduct(Product oldProduct)
 }
 
-class Produkt
+class Product
 {
 name
-Position
-kategorie
-produktLaden()
+categorie
 }
 
-class Supermarkt
+class Supermarket
 {
-grundriss
-supermarktLaden()
+layout
+listofProducts
+containsProduct(Product product)
+}
+
+
+class NavigationControler
+{
+navigationStarten(Einkaufsliste)
 }
 
 class Position
 {
-regal
-spalte
+shelf
+cloumn
+listofProducts_arary
 }
 
-class Main
-{
-navigationStarten(Einkaufsliste, Supermarkt)
-}
-
+NavigationControler "1" --o "1" Shoppinglist : calls
+NavigationControler "1" --o "1" Supermarket : calls
+Product "n" o-- "m" Shoppinglist : contains
+Supermarket "n" --o "m" Product : contains
+Position "1" o-- "n" Product : has
+Supermarket "1" --* "n" Position : has
+Supermarket "1" o-- "n" Shoppinglist : belongs to 
 
 @enduml
