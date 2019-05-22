@@ -344,24 +344,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lukas\\.nuget\\packages\\": {},
+    "C:\\Users\\bocker\\.nuget\\packages\\": {},
+    "C:\\ProgramData\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lukas\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.csproj",
+      "projectUniqueName": "C:\\Users\\bocker\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.csproj",
       "projectName": "Einkaufsplanung",
-      "projectPath": "C:\\Users\\Lukas\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.csproj",
-      "packagesPath": "C:\\Users\\Lukas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lukas\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung\\obj\\",
+      "projectPath": "C:\\Users\\bocker\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.csproj",
+      "packagesPath": "C:\\Users\\bocker\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bocker\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\ProgramData\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lukas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\bocker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
