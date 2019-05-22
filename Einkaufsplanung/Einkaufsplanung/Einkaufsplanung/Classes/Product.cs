@@ -6,5 +6,6 @@ namespace Einkaufsplanung.Classes
 {
     class Product
     {
+        ///Class for Product
     }
 }

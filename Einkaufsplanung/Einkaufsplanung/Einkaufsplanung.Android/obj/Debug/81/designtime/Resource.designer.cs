@@ -28,6 +28,19 @@ namespace Einkaufsplanung.Droid
 		{
 		}
 		
+		public partial class Attribute
+		{
+			
+			static Attribute()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Attribute()
+			{
+			}
+		}
+		
 		public partial class Color
 		{
 			
