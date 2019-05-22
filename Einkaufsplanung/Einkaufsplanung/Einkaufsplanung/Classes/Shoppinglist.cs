@@ -5,6 +5,6 @@ using System.Text;
 namespace Einkaufsplanung.Classes
 { 
     class Shoppinglist { 
-    
+        
     }
 }
