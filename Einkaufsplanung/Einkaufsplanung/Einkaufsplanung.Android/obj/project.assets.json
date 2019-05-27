@@ -985,24 +985,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kaehnyla\\.nuget\\packages\\": {},
-    "C:\\ProgramData\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\bocker\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kaehnyla\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.Android\\Einkaufsplanung.Android.csproj",
+      "projectUniqueName": "C:\\Users\\bocker\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.Android\\Einkaufsplanung.Android.csproj",
       "projectName": "Einkaufsplanung.Android",
-      "projectPath": "C:\\Users\\kaehnyla\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.Android\\Einkaufsplanung.Android.csproj",
-      "packagesPath": "C:\\Users\\kaehnyla\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kaehnyla\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.Android\\obj\\",
+      "projectPath": "C:\\Users\\bocker\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.Android\\Einkaufsplanung.Android.csproj",
+      "packagesPath": "C:\\Users\\bocker\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bocker\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\ProgramData\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\kaehnyla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bocker\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1016,8 +1016,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "C:\\Users\\kaehnyla\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.csproj": {
-              "projectPath": "C:\\Users\\kaehnyla\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.csproj"
+            "C:\\Users\\bocker\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.csproj": {
+              "projectPath": "C:\\Users\\bocker\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung\\Einkaufsplanung.csproj"
             }
           }
         }
