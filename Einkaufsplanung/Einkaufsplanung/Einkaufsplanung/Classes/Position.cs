@@ -9,23 +9,22 @@ namespace Einkaufsplanung.Classes
         /// <summary>
         /// Int that contains a number assigned to a shelf
         /// </summary>
-        int shelf;
+        int shelf_;
 
         /// <summary>
         /// Int that contains a number assigned to a column in a shelf 
         /// </summary>
-        int column;
+        int column_;
 
         /// <summary>
         /// Array that contains all Products in a column of a shelf
         /// </summary>
-        Product[] listofProducts;
+        List<Product> produkte_ = new List<Product>();
 
-        public Position(int shelf, int column, Product[] listofProducts)
+        public Position(int shelf, int column)
         {
-            this.shelf = shelf;
-            this.column = column;
-
+            shelf_ = shelf;
+            column_ = column;
         }
     }
 }
