@@ -111,6 +111,7 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "EInkaufsplanerSEProject.dll" comes first in this list. */
 		"EInkaufsplanerSEProject.dll",
+		"RoyT.AStar.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
