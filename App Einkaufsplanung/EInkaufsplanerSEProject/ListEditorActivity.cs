@@ -24,7 +24,11 @@ namespace EInkaufsplanerSEProject
 
             SetContentView(Resource.Layout.listeditor);
 
+            
+
             mListView = FindViewById<ListView>(Resource.Id.myListView);
+
+
 
             //Producte erstellen
             Classes.Product weihenstephanMilch = new Classes.Product("Weihenstephan Milch", "Milch");
