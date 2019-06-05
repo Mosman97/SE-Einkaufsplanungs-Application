@@ -58,31 +58,36 @@ namespace EInkaufsplanerSEProject.Classes
             bool sorted = false;
             Position product1;
             Position product2;
+            Position current = entrance;
             int pathlengthproduct1;
             int pathlengthproduct2;
             sortedProducts = products.ToArray();
 
-            do
+            for (int j = 0; j < sortedProducts.Length - 1; j++)
             {
-                sorted = true;
-
-                for (int i = 0; i < sortedProducts.Length - 1; i++)
+                do
                 {
-                    /*product1 = new Position(sortedProducts[i].x, sortedProducts[i].y);
-                    product2 = new Position(sortedProducts[i + 1].x, sortedProducts[i + 1].y);
-                    pathlengthproduct1 = map.GetPath(entrance, product1).Length;
-                    pathlengthproduct2 = map.GetPath(entrance, product2).Length;
-                    if (pathlengthproduct1 > pathlengthproduct2)
+                    sorted = true;
+
+                    for (int i = j; i < sortedProducts.Length - 1; i++)
                     {
-                        Product temp = sortedProducts[i];
-                        sortedProducts[i] = sortedProducts[i + 1];
-                        sortedProducts[i + 1] = temp;
+                        product1 = new Position(sortedProducts[i].x, sortedProducts[i].y);
+                        product2 = new Position(sortedProducts[i + 1].x, sortedProducts[i + 1].y);
+                        pathlengthproduct1 = map.GetPath(current, product1).Length;
+                        pathlengthproduct2 = map.GetPath(current, product2).Length;
+                        if (pathlengthproduct1 > pathlengthproduct2)
+                        {
+                            Product temp = sortedProducts[i];
+                            sortedProducts[i] = sortedProducts[i + 1];
+                            sortedProducts[i + 1] = temp;
 
-                        sorted = false;
-                    }*/
-                }
+                            sorted = false;
+                        }
+                    }
 
-            } while (!sorted);
+                } while (!sorted);
+                current = new Position(sortedProducts[j].x, sortedProducts[j].y);
+            }
         }
     }
 }

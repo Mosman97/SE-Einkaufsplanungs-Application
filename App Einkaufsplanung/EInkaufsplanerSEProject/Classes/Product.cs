@@ -16,6 +16,8 @@ namespace EInkaufsplanerSEProject.Classes
     {
         private string name_;
         private string category_;
+        public int x;
+        public int y;
 
         public string Name { get { return name_; }  set { name_ = value; } }
 
