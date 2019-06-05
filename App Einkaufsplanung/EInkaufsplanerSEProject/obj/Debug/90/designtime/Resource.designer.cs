@@ -3339,6 +3339,9 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7F0C0025
 			public const int default_activity_button = 2131492901;
 			
+			// aapt resource value: 0x7F010008
+			public const int Delete = 2130771976;
+			
 			// aapt resource value: 0x7F0C0026
 			public const int design_bottom_sheet = 2131492902;
 			
