@@ -11,6 +11,8 @@ using Android.Views;
 using Android.Widget;
 
 using RoyT.AStar;
+using System.Drawing;
+using Android.Graphics;
 
 namespace EInkaufsplanerSEProject.Classes
 {
@@ -51,6 +53,9 @@ namespace EInkaufsplanerSEProject.Classes
             map.BlockCell(new Position(7, 8));
             map.BlockCell(new Position(8, 8));
             map.BlockCell(new Position(9, 8));
+
+            Bitmap map1 = BitmapFactory.DecodeFile(@"jasdgahga");
+            
         }
 
         private void SortList()
