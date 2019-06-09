@@ -71,8 +71,8 @@ namespace EInkaufsplanerSEProject.Classes
 
                     for (int i = j; i < sortedProducts.Length - 1; i++)
                     {
-                        product1 = new Position(sortedProducts[i].x, sortedProducts[i].y);
-                        product2 = new Position(sortedProducts[i + 1].x, sortedProducts[i + 1].y);
+                        product1 = new Position(sortedProducts[i].Pos_x, sortedProducts[i].Pos_y);
+                        product2 = new Position(sortedProducts[i + 1].Pos_x, sortedProducts[i + 1].Pos_y);
                         pathlengthproduct1 = map.GetPath(current, product1).Length;
                         pathlengthproduct2 = map.GetPath(current, product2).Length;
                         if (pathlengthproduct1 > pathlengthproduct2)
@@ -86,7 +86,7 @@ namespace EInkaufsplanerSEProject.Classes
                     }
 
                 } while (!sorted);
-                current = new Position(sortedProducts[j].x, sortedProducts[j].y);
+                current = new Position(sortedProducts[j].Pos_x, sortedProducts[j].Pos_y);
             }
         }
     }

@@ -15,8 +15,8 @@ namespace EInkaufsplanerSEProject
         
         protected override void OnCreate(Bundle savedInstanceState)
         {
-
-            Button btnentrar;
+            Button loadbtn;
+            Button startbtn;
 
             //Wird automatisch generiert
             base.OnCreate(savedInstanceState);
@@ -25,26 +25,37 @@ namespace EInkaufsplanerSEProject
             SetContentView(Resource.Layout.activity_main);
 
             //Reference Button
-            btnentrar = FindViewById<Button>(Resource.Id.createlist);
-
+            loadbtn = FindViewById<Button>(Resource.Id.loadlist);
+            startbtn = FindViewById<Button>(Resource.Id.createlist);
+            
             //Sprung in andere activity
-            btnentrar.Click += btnentrar_Click;
-            /*
-            {
-                StartActivity(new Intent(this, typeof(listeditorclass)));
-            };
-            */
-
+            loadbtn.Click += loadbtn_Click;
+            startbtn.Click += startbtn_Click;           
         }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
-        
-        void btnentrar_Click(object sender, EventArgs e)
+
+        void loadbtn_Click(object sender, EventArgs e)
         {
+            Intent intent = new Intent(this, typeof(ListEditorActivity));
+            this.StartActivity(intent);
+        }
+
+        void startbtn_Click(object sender, EventArgs e)
+        {
+            FragmentTransaction transcation = FragmentManager.BeginTransaction();
+            CreateList_Dialog creatlistDialog = new CreateList_Dialog();
+            creatlistDialog.Show(transcation, "dialog fragment");
+        }
+
+        public void creatlist_Click(object sender, EventArgs e)
+        {
+            //Namen übergeben und Liste erstellen!
             Intent intent = new Intent(this, typeof(ListEditorActivity));
             this.StartActivity(intent);
         }

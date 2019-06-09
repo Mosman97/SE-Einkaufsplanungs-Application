@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Gib einen Namen für deine neue Einkaufsliste ein:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialog_title"
+        android:textSize="45px"
+        android:textStyle="bold" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"/>
+    <Button
+        android:text="Liste erstellen!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/createbutton_dialog" />
+</LinearLayout>
