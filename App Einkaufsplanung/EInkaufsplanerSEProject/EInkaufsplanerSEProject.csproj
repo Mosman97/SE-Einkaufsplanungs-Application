@@ -61,6 +61,8 @@
   <ItemGroup>
     <Compile Include="AddItem_Dialog.cs" />
     <Compile Include="BitmapActivity.cs" />
+    <Compile Include="CategoryListViewActivity.cs" />
+    <Compile Include="CategoryListViewAdapter.cs" />
     <Compile Include="Classes\Database.cs" />
     <Compile Include="Classes\ListStorer.cs" />
     <Compile Include="Classes\Pathfinding.cs" />
@@ -164,6 +166,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\addItem_dialog.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\categorylist.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\category_row.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -14,22 +14,30 @@ namespace EInkaufsplanerSEProject
 {
     class AddItem_Dialog : DialogFragment
     {
+        EditText ctgname;
+
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             base.OnCreateView(inflater, container, savedInstanceState);
 
             var view = inflater.Inflate(Resource.Layout.addItem_dialog, container, false);
 
-            Button button = view.FindViewById<Button>(Resource.Id.addItem_dbutton);
+            ctgname = view.FindViewById<EditText>(Resource.Id.ctgName);
 
-            button.Click += addItem_Click;
+            Button buttonctg = view.FindViewById<Button>(Resource.Id.choose_product);
+
+            //Add Click-Event to Button
+            buttonctg.Click += (object sender, EventArgs e) =>
+            {
+                string name = ctgname.Text;
+
+                Intent intent = new Intent(Context, typeof(CategoryListViewActivity));
+                intent.PutExtra("ctgName", name);
+                this.StartActivity(intent);
+            };
 
             return view;
         }
 
-        private void addItem_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

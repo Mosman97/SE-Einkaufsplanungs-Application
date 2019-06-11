@@ -13,17 +13,11 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Produktname"/>
-    <TextView
-        android:text="Welche Marke?"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/choose_title"
-        android:textSize="35px"
-        android:textStyle="bold" />
+        android:hint="Produktname"
+        android:id="@+id/ctgName" />
     <Button
-        android:text="Zur Liste hinzufügen!"
+        android:text="Choose Product"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/addItem_dbutton" />
+        android:id="@+id/choose_product" />
 </LinearLayout>
