@@ -29,10 +29,6 @@ namespace EInkaufsplanerSEProject
             prodName = Intent.GetStringExtra("ctgName");
       SetContentView(Resource.Layout.categorylist);
 
-      var toolbar = FindViewById<Toolbar>(Resource.Id.main_toolbar);
-      SetActionBar(toolbar);
-      ActionBar.Title = "Listentitel";
-
             var toolbar = FindViewById<Toolbar>(Resource.Id.main_toolbar);
             SetActionBar(toolbar);
             ActionBar.Title = prodName;
@@ -51,26 +47,12 @@ namespace EInkaufsplanerSEProject
                 mItems.Add(item.ToString());
             }
 
-      //Producte erstellen
-      Classes.Product weihenstephanMilch = new Classes.Product("Weihenstephan Milch", "Milch");
-      Classes.Product roggenBrot = new Classes.Product("Roggen Brot", "Brot");
-      Classes.Product pinkLadyApfel = new Classes.Product("Pink Lady Apfel", "Apfel");
-
-      mItems = new List<string>();
-      mItems.Add(prodName);
 
       CategoryListViewAdapter adapter = new CategoryListViewAdapter(this, mItems);
 
       mListView.Adapter = adapter;
 
-      //Shoppinglist aus den Produkten erstellen und speichern
-      Shoppinglist list = new Shoppinglist();
-      list.Name = "Meine Liste 1";
-      list.addProduct(weihenstephanMilch);
-      list.addProduct(roggenBrot);
-      list.addProduct(pinkLadyApfel);
-
-            mListView.ItemClick += MListView_ItemClick;
+        mListView.ItemClick += MListView_ItemClick;
 
         }
 
