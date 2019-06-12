@@ -13,17 +13,17 @@ using Android.Widget;
 
 namespace EInkaufsplanerSEProject.Classes
 {
-    class Shoppinglist
+  public class Shoppinglist
+  {
+    public List<Product> Products;
+
+    private string name_;
+
+    public string Name { get { return name_; } set { name_ = value; } }
+
+    public void addProduct(Product product)
     {
-        public List<Product> Products;
-
-        private string name_;
-
-        public string Name { get { return name_; } set { name_ = value; } }
-
-        public void addProduct(Product product)
-        {
-            Products.Add(product);
-        }
+      Products.Add(product);
     }
+  }
 }
