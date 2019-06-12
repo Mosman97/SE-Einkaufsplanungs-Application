@@ -4998,13 +4998,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem beim Lesen der Cachedatei \"C:\\Users\\Lukas\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\obj\\EInkaufsplanerSEProject.csproj.nuget.cache\": Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

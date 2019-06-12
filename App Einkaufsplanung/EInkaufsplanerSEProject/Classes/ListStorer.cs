@@ -34,7 +34,7 @@ namespace EInkaufsplanerSEProject.Classes
         file.WriteLine(item.Name);
         foreach (Product prod in item.Products)
         {
-          file.WriteLine(prod.Name + ";" + prod.category + ";" + prod.Pos_x + ";" + prod.Pos_y);
+          file.WriteLine(prod.Name + ";" + prod.Category + ";" + prod.Pos_x + ";" + prod.Pos_y);
         }
       }
       file.Close();

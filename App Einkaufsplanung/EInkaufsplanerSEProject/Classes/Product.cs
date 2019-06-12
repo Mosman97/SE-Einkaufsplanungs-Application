@@ -28,12 +28,6 @@ namespace EInkaufsplanerSEProject.Classes
     public int Pos_y { get { return pos_y_; } set { pos_y_ = value; } }
 
 
-        public Product(string name, string category) //Obsolet wenn alles dynamisch läuft
-        {
-            name_ = name;
-            category_ = category;
-        }
-
     public Product(string name, string category, int x, int y) //Wird beim Dynamischen einlesen der Daten aus der Datei gebraucht
     {
       name_ = name;
