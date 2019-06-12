@@ -9,24 +9,29 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using EInkaufsplanerSEProject.Classes;
 
 namespace EInkaufsplanerSEProject
 {
-    [Activity(Label = "CategoryListViewActivity")]
-    public class CategoryListViewActivity : Activity
-    {
-        private List<string> mItems;
-        private ListView mListView;
-        private string prodName;
+  [Activity(Label = "CategoryListViewActivity")]
+  public class CategoryListViewActivity : Activity
+  {
+    private List<string> mItems;
+    private ListView mListView;
+    public static List<Shoppinglist> AllShoppinglists;
+    private string prodName;
 
-        protected override void OnCreate(Bundle bundle)
-        {
-            base.OnCreate(bundle);
+    protected override void OnCreate(Bundle bundle)
+    {
+      base.OnCreate(bundle);
 
             //Ctg-Name entpacken
             prodName = Intent.GetStringExtra("ctgName");
+      SetContentView(Resource.Layout.categorylist);
 
-            SetContentView(Resource.Layout.categorylist);
+      var toolbar = FindViewById<Toolbar>(Resource.Id.main_toolbar);
+      SetActionBar(toolbar);
+      ActionBar.Title = "Listentitel";
 
             var toolbar = FindViewById<Toolbar>(Resource.Id.main_toolbar);
             SetActionBar(toolbar);
@@ -35,8 +40,10 @@ namespace EInkaufsplanerSEProject
 
             //Load products from Database
             List<Classes.Product> prodList = Classes.Database.getProducts(prodName);
+      prodName = Intent.GetStringExtra("ctgName");
 
-            mListView = FindViewById<ListView>(Resource.Id.categoryListView);
+      mListView = FindViewById<ListView>(Resource.Id.categoryListView);
+
 
             mItems = new List<string>();
             foreach (Classes.Product item in prodList)
@@ -44,9 +51,24 @@ namespace EInkaufsplanerSEProject
                 mItems.Add(item.ToString());
             }
 
-            CategoryListViewAdapter adapter = new CategoryListViewAdapter(this, mItems);
+      //Producte erstellen
+      Classes.Product weihenstephanMilch = new Classes.Product("Weihenstephan Milch", "Milch");
+      Classes.Product roggenBrot = new Classes.Product("Roggen Brot", "Brot");
+      Classes.Product pinkLadyApfel = new Classes.Product("Pink Lady Apfel", "Apfel");
 
-            mListView.Adapter = adapter;
+      mItems = new List<string>();
+      mItems.Add(prodName);
+
+      CategoryListViewAdapter adapter = new CategoryListViewAdapter(this, mItems);
+
+      mListView.Adapter = adapter;
+
+      //Shoppinglist aus den Produkten erstellen und speichern
+      Shoppinglist list = new Shoppinglist();
+      list.Name = "Meine Liste 1";
+      list.addProduct(weihenstephanMilch);
+      list.addProduct(roggenBrot);
+      list.addProduct(pinkLadyApfel);
 
             mListView.ItemClick += MListView_ItemClick;
 
@@ -59,4 +81,5 @@ namespace EInkaufsplanerSEProject
             Console.WriteLine(mItems[e.Position]);
         }
     }
-}
+
+  }
