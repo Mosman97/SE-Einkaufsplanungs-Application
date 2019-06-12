@@ -13,6 +13,7 @@ using Android.Widget;
 using RoyT.AStar;
 using System.Drawing;
 using Android.Graphics;
+using Android.Content.Res;
 
 namespace EInkaufsplanerSEProject.Classes
 {
@@ -40,22 +41,27 @@ namespace EInkaufsplanerSEProject.Classes
 
         private void CreateMap()
         {
-            map = new Grid(10, 10, 1.0f);
-            map.BlockCell(new Position(2, 1));
-            map.BlockCell(new Position(3, 2));
-            map.BlockCell(new Position(3, 3));
-            map.BlockCell(new Position(3, 4));
-            map.BlockCell(new Position(3, 5));
-            map.BlockCell(new Position(3, 6));
-            map.BlockCell(new Position(3, 7));
-            map.BlockCell(new Position(5, 8));
-            map.BlockCell(new Position(6, 8));
-            map.BlockCell(new Position(7, 8));
-            map.BlockCell(new Position(8, 8));
-            map.BlockCell(new Position(9, 8));
+            int mapwidth = 0;
+            int mapheight = 0;
 
-            Bitmap map1 = BitmapFactory.DecodeFile(@"jasdgahga");
-            
+            AssetManager assets = Android.App.Application.Context.Assets;
+            Bitmap map1 = BitmapFactory.DecodeStream(assets.Open("Supermarket.bmp"));
+
+            mapwidth = map1.Width;
+            mapheight = map1.Height;
+
+            map = new Grid(mapwidth, mapheight, 1.0f);
+
+            for (int i = 0; i < mapwidth; i++)
+            {
+                for (int j = 0; j < mapheight; j++)
+                {
+                    if (map1.GetPixel(i, j) == Android.Graphics.Color.Black)
+                    {
+                        map.BlockCell(new Position(i, j));
+                    }
+                }
+            }
         }
 
         private void SortList()
