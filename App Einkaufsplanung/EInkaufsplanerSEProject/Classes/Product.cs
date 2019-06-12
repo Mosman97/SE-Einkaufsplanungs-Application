@@ -21,11 +21,20 @@ namespace EInkaufsplanerSEProject.Classes
 
         public string Name { get { return name_; }  set { name_ = value; } }
 
-        public string category { get { return category_; } set { category_ = value; } }
+        public string Category { get { return category_; } set { category_ = value; } }
 
         public int Pos_x { get { return pos_x_; }  set { pos_x_ = value; } }
 
         public int Pos_y { get { return pos_y_; } set { pos_y_ = value; } }
+
+        //for DB
+        public Product(string name, string category, int pos_x, int pos_y)
+        {
+            name_ = name;
+            category_ = category;
+            pos_x_ = pos_x;
+            pos_y_ = pos_y;
+        }
 
         public Product(string name, string category) //Obsolet wenn alles dynamisch läuft
         {

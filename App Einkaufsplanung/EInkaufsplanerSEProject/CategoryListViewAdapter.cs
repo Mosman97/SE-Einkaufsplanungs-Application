@@ -42,17 +42,16 @@ namespace EInkaufsplanerSEProject
         {
             View row = convertView;
 
-
             if (row == null)
             {
                 row = Context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem1, null);
 
-                row = LayoutInflater.From(mContext).Inflate(Resource.Layout.listview_row, null, false);
+                row = LayoutInflater.From(mContext).Inflate(Resource.Layout.category_row, null, false);
             }
 
 
 
-            TextView Name = row.FindViewById<TextView>(Resource.Id.txtName);
+            TextView Name = row.FindViewById<TextView>(Resource.Id.prodName);
             Name.Text = mItems[position];
 
             return row;

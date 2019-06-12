@@ -23,32 +23,40 @@ namespace EInkaufsplanerSEProject
         {
             base.OnCreate(bundle);
 
+            //Ctg-Name entpacken
+            prodName = Intent.GetStringExtra("ctgName");
 
             SetContentView(Resource.Layout.categorylist);
 
             var toolbar = FindViewById<Toolbar>(Resource.Id.main_toolbar);
             SetActionBar(toolbar);
-            ActionBar.Title = "Listentitel";
+            ActionBar.Title = prodName;
+            
 
-            prodName = Intent.GetStringExtra("ctgName");
+            //Load products from Database
+            List<Classes.Product> prodList = Classes.Database.getProducts(prodName);
 
             mListView = FindViewById<ListView>(Resource.Id.categoryListView);
 
-
-
-            //Producte erstellen
-            Classes.Product weihenstephanMilch = new Classes.Product("Weihenstephan Milch", "Milch");
-            Classes.Product roggenBrot = new Classes.Product("Roggen Brot", "Brot");
-            Classes.Product pinkLadyApfel = new Classes.Product("Pink Lady Apfel", "Apfel");
-
             mItems = new List<string>();
-            mItems.Add(prodName);
+            foreach (Classes.Product item in prodList)
+            {
+                mItems.Add(item.ToString());
+            }
 
             CategoryListViewAdapter adapter = new CategoryListViewAdapter(this, mItems);
 
             mListView.Adapter = adapter;
 
+            mListView.ItemClick += MListView_ItemClick;
+
         }
 
+        private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            //Needs implementation to write item to list and return to Shoppinglist listview
+            string auswahl = mItems[e.Position];
+            Console.WriteLine(mItems[e.Position]);
+        }
     }
 }

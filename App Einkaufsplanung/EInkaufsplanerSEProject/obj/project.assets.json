@@ -4940,11 +4940,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BENUTZER-LUKAS\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\EInkaufsplanerSEProject.csproj",
+      "projectUniqueName": "C:\\Users\\Lukas\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\EInkaufsplanerSEProject.csproj",
       "projectName": "EInkaufsplanerSEProject",
-      "projectPath": "D:\\BENUTZER-LUKAS\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\EInkaufsplanerSEProject.csproj",
+      "projectPath": "C:\\Users\\Lukas\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\EInkaufsplanerSEProject.csproj",
       "packagesPath": "C:\\Users\\Lukas\\.nuget\\packages\\",
-      "outputPath": "D:\\BENUTZER-LUKAS\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\obj\\",
+      "outputPath": "C:\\Users\\Lukas\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

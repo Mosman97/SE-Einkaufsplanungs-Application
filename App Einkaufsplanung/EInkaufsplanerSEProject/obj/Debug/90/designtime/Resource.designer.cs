@@ -3270,9 +3270,6 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7F0C0014
 			public const int add = 2131492884;
 			
-			// aapt resource value: 0x7F010012
-			public const int Add = 2130771986;
-			
 			// aapt resource value: 0x7F0C0015
 			public const int alertTitle = 2131492885;
 			
@@ -3333,8 +3330,8 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7F0C0021
 			public const int coordinator = 2131492897;
 			
-			// aapt resource value: 0x7F010014
-			public const int createbutton_dialog = 2130771988;
+			// aapt resource value: 0x7F010013
+			public const int createbutton_dialog = 2130771987;
 			
 			// aapt resource value: 0x7F010003
 			public const int createlist = 2130771971;
@@ -3354,8 +3351,8 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7F0C0025
 			public const int default_activity_button = 2131492901;
 			
-			// aapt resource value: 0x7F010018
-			public const int Delete = 2130771992;
+			// aapt resource value: 0x7F010017
+			public const int Delete = 2130771991;
 			
 			// aapt resource value: 0x7F0C0026
 			public const int design_bottom_sheet = 2131492902;
@@ -3372,8 +3369,8 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7F0C002A
 			public const int design_navigation_view = 2131492906;
 			
-			// aapt resource value: 0x7F010013
-			public const int dialog_title = 2130771987;
+			// aapt resource value: 0x7F010012
+			public const int dialog_title = 2130771986;
 			
 			// aapt resource value: 0x7F0C002B
 			public const int edit_query = 2131492907;
@@ -3462,8 +3459,8 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7F0C0043
 			public const int masked = 2131492931;
 			
-			// aapt resource value: 0x7F010019
-			public const int menu_save = 2130771993;
+			// aapt resource value: 0x7F010018
+			public const int menu_save = 2130771992;
 			
 			// aapt resource value: 0x7F0C0044
 			public const int message = 2131492932;
@@ -3480,14 +3477,14 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7F0C0048
 			public const int multiply = 2131492936;
 			
-			// aapt resource value: 0x7F010015
-			public const int myListView = 2130771989;
+			// aapt resource value: 0x7F010014
+			public const int myListView = 2130771988;
 			
 			// aapt resource value: 0x7F0C0049
 			public const int navigation_header_container = 2131492937;
 			
-			// aapt resource value: 0x7F010016
-			public const int newItem = 2130771990;
+			// aapt resource value: 0x7F010015
+			public const int newItem = 2130771989;
 			
 			// aapt resource value: 0x7F0C0013
 			public const int none = 2131492883;
@@ -3711,8 +3708,8 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7F0C0092
 			public const int transition_transform = 2131493010;
 			
-			// aapt resource value: 0x7F010017
-			public const int txtName = 2130771991;
+			// aapt resource value: 0x7F010016
+			public const int txtName = 2130771990;
 			
 			// aapt resource value: 0x7F0C0093
 			public const int uniform = 2131493011;

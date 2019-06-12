@@ -23,7 +23,7 @@ namespace EInkaufsplanerSEProject.Classes
         /// </summary>
         /// <param name="eingabe"></param>
         /// <returns></returns>
-        public List<Product> getProducts(string eingabe)
+        public static List<Product> getProducts(string eingabe)
         {
             List<Product> rProducts = new List<Product>();
 
@@ -32,26 +32,30 @@ namespace EInkaufsplanerSEProject.Classes
             using (var reader = new StreamReader(assets.Open("database.csv")))
             using (var csv = new CsvReader(reader))
             {
+                //rProducts = csv.GetRecords<Product>();
+                csv.Configuration.Delimiter = ";";
+
 
                 csv.Read();
                 csv.ReadHeader();
 
-                while (csv.Read())
+                while(csv.Read())
                 {
                     Product record = new Product
                     {
-                        category = csv.GetField("Category"),
-                        Name = csv.GetField("Name"),
-                        Pos_x = csv.GetField<int>("x"),
-                        Pos_y = csv.GetField<int>("y"),
+                        Category = csv.GetField(0),
+                        Name = csv.GetField(1),
+                        Pos_x = csv.GetField<int>(2),
+                        Pos_y = csv.GetField<int>(3)
                     };
 
-                    if(eingabe == record.category)
+                    if(eingabe == record.Category)
                     {
                         rProducts.Add(record);
                     }
 
                 }
+                
             }
 
             return rProducts;
