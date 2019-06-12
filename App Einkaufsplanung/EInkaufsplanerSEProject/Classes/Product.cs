@@ -16,18 +16,29 @@ namespace EInkaufsplanerSEProject.Classes
     {
         private string name_;
         private string category_;
-        public int x;
-        public int y;
+        private int pos_x_;
+        private int pos_y_;
 
         public string Name { get { return name_; }  set { name_ = value; } }
 
         public string category { get { return category_; } set { category_ = value; } }
 
-        public Product(string name, string category)
+        public int Pos_x { get { return pos_x_; }  set { pos_x_ = value; } }
+
+        public int Pos_y { get { return pos_y_; } set { pos_y_ = value; } }
+
+        public Product(string name, string category) //Obsolet wenn alles dynamisch läuft
         {
             name_ = name;
             category_ = category;
         }
+
+        public Product(string name)
+        {
+            name_ = name;
+        }
+
+        public Product() { }
 
         public override string ToString()
         {

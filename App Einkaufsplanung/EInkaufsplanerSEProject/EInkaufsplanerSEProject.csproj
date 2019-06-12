@@ -59,9 +59,16 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddItem_Dialog.cs" />
+    <Compile Include="BitmapActivity.cs" />
+    <Compile Include="CategoryListViewActivity.cs" />
+    <Compile Include="CategoryListViewAdapter.cs" />
+    <Compile Include="Classes\Database.cs" />
+    <Compile Include="Classes\ListStorer.cs" />
     <Compile Include="Classes\Pathfinding.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Shoppinglist.cs" />
+    <Compile Include="CreateList_Dialog.cs" />
     <Compile Include="ListEditorActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MyListViewAdapter.cs" />
@@ -72,6 +79,8 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidAsset Include="Assets\database.csv" />
+    <AndroidAsset Include="Assets\lists.csv" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_main.axml">
@@ -100,6 +109,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="CsvHelper">
+      <Version>12.1.2</Version>
+    </PackageReference>
     <PackageReference Include="RoyT.AStar">
       <Version>2.1.0</Version>
     </PackageReference>
@@ -118,12 +130,55 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
-<<<<<<< HEAD
   <ItemGroup>
-    <Folder Include="Views\" />
+    <AndroidResource Include="Resources\layout\bitmap_viewer.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
-=======
->>>>>>> 9fbebac5450279d2eecda135966075bc7010414f
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\main_toolbar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Menu\top_menus.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_action_content_create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_action_content_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_menu_copy_holo_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_menu_cut_holo_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_menu_paste_holo_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_menu_search_holo_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\createlist_dialog.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\addItem_dialog.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\categorylist.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\category_row.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.

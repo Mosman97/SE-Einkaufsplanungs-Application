@@ -18,13 +18,30 @@ namespace EInkaufsplanerSEProject
         private List<string> mItems;
         private ListView mListView;
 
+        //Custom Menübar mit Save Icon
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.top_menus, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+        //Wenn user save tapped erscheint eine Meldung:
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            Toast.MakeText(this, "Action selected: " + item.TitleFormatted,
+                ToastLength.Short).Show();
+            return base.OnOptionsItemSelected(item);
+        }
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.listeditor);
 
-            
+            var toolbar = FindViewById<Toolbar>(Resource.Id.main_toolbar);
+            SetActionBar(toolbar);
+            ActionBar.Title = "Listentitel";
+
+
 
             mListView = FindViewById<ListView>(Resource.Id.myListView);
 
@@ -43,6 +60,18 @@ namespace EInkaufsplanerSEProject
             MyListViewAdapter adapter = new MyListViewAdapter(this, mItems);
 
             mListView.Adapter = adapter;
+
+
+            Button addItem;
+            addItem = FindViewById<Button>(Resource.Id.newItem);
+            addItem.Click += addbtn_Click;
+        }
+
+        void addbtn_Click(object sender, EventArgs e)
+        {
+            FragmentTransaction transcation = FragmentManager.BeginTransaction();
+            AddItem_Dialog addItem_Dialog = new AddItem_Dialog();
+            addItem_Dialog.Show(transcation, "dialog fragment");
         }
     }
 }
