@@ -26,44 +26,48 @@ namespace EInkaufsplanerSEProject.Classes
 
     public void StoreList()
     {
-      FileStream fs = new FileStream(@"..\Assets\Lists.csv", FileMode.Open);
-      StreamWriter file = new StreamWriter(fs);
+            AssetManager assets = Android.App.Application.Context.Assets;
 
-      foreach (Shoppinglist item in CategoryListViewActivity.AllShoppinglists)
-      {
-        file.WriteLine(item.Name);
-        foreach (Product prod in item.Products)
-        {
-          file.WriteLine(prod.Name + ";" + prod.Category + ";" + prod.Pos_x + ";" + prod.Pos_y);
-        }
-      }
-      file.Close();
-      fs.Close();
+            using (StreamWriter sw = new StreamWriter(assets.Open("lists.csv")))
+            {
+                foreach (Shoppinglist item in CategoryListViewActivity.AllShoppinglists)
+                {
+                    sw.WriteLine(item.Name);
+                    foreach (Product prod in item.Products)
+                    {
+                        sw.WriteLine(prod.Name + ";" + prod.Category + ";" + prod.Pos_x + ";" + prod.Pos_y);
+                    }
+                }
+            }
 
     }
 
-    public void LoadList()
-    {
-      Shoppinglist list = new Shoppinglist(); 
-      FileStream fs = new FileStream(@"..\Assets\Lists.csv", FileMode.Open);
-      StreamReader file = new StreamReader(fs);
-      string line = file.ReadLine();
+        public void LoadList()
+        {
+            AssetManager assets = Android.App.Application.Context.Assets;
 
-      while (line != null)
-      {
-        if (!line.Contains(";")) // Wenn in der Zeile nur ein Objekt steht ist es ein Listenname. Somit haben wir den Beginn einer neuen Liste.
-        {
-          list = new Shoppinglist();
-          list.Name = line;
-          CategoryListViewActivity.AllShoppinglists.Add(list);
+            Shoppinglist list = new Shoppinglist();
+
+            using (StreamReader sr = new StreamReader(assets.Open("lists.csv")))
+            {
+                string line = sr.ReadToEnd();
+
+                while (line != null)
+                {
+                    if (!line.Contains(";")) // Wenn in der Zeile nur ein Objekt steht ist es ein Listenname. Somit haben wir den Beginn einer neuen Liste.
+                    {
+                        list = new Shoppinglist();
+                        list.Name = line;
+                        CategoryListViewActivity.AllShoppinglists.Add(list);
+                    }
+                    else // Wenn eine Zeile mindestens einen ; enthält, enthält sie Produkte, die zur aktuellen Liste addiert werden.
+                    {
+                        string[] zeile = line.Split(';');
+                        Product prod = new Product(zeile[0], zeile[1], Convert.ToInt32(zeile[2]), Convert.ToInt32(zeile[3]));
+                        list.addProduct(prod);
+                    }
+                }
+            }
         }
-        else // Wenn eine Zeile mindestens einen ; enthält, enthält sie Produkte, die zur aktuellen Liste addiert werden.
-        {
-          string[] zeile = line.Split(';');
-          Product prod = new Product(zeile[0], zeile[1], Convert.ToInt32(zeile[2]), Convert.ToInt32(zeile[3]));
-          list.addProduct(prod);
-        }
-      }
-    }
   }
 }
