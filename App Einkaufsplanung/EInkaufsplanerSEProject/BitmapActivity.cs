@@ -10,6 +10,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Java.IO;
+using Android.Content.Res;
 
 namespace EInkaufsplanerSEProject
 {
@@ -21,6 +23,14 @@ namespace EInkaufsplanerSEProject
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.bitmap_viewer);
+
+            AssetManager assets = Android.App.Application.Context.Assets;
+
+            ImageView bitmap;
+            bitmap = (ImageView)FindViewById(Resource.Id.marketpath);
+            System.IO.Stream si1 = assets.Open("Supermarket.bmp");
+            Bitmap bitmap1 = BitmapFactory.DecodeStream(si1);
+            bitmap.SetImageBitmap(bitmap1);
 
         }
 
