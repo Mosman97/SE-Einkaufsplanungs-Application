@@ -42,7 +42,27 @@ namespace EInkaufsplanerSEProject.Classes
 
     }
 
-        public void LoadList()
+        public static List<string> loadListNames()
+        {
+            List<string> listnames = new List<string>();
+            AssetManager assets = Android.App.Application.Context.Assets;
+            using (StreamReader sr = new StreamReader(assets.Open("lists.csv")))
+            {
+                string line = sr.ReadLine();
+
+                while (line != null)
+                {
+                    if (!line.Contains(";")) // Wenn in der Zeile nur ein Objekt steht ist es ein Listenname. Somit haben wir den Beginn einer neuen Liste.
+                    {
+                        listnames.Add(line);
+                    }
+                    line = sr.ReadLine();
+                }
+            }
+            return listnames;
+        }
+
+        public void LoadList(string listName)
         {
             AssetManager assets = Android.App.Application.Context.Assets;
 

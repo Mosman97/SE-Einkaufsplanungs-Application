@@ -27,7 +27,8 @@ namespace EInkaufsplanerSEProject
 
             //Ctg-Name entpacken
             prodName = Intent.GetStringExtra("ctgName");
-      SetContentView(Resource.Layout.categorylist);
+
+            SetContentView(Resource.Layout.categorylist);
 
             var toolbar = FindViewById<Toolbar>(Resource.Id.main_toolbar);
             SetActionBar(toolbar);
@@ -36,9 +37,9 @@ namespace EInkaufsplanerSEProject
 
             //Load products from Database
             List<Classes.Product> prodList = Classes.Database.getProducts(prodName);
-      prodName = Intent.GetStringExtra("ctgName");
+            prodName = Intent.GetStringExtra("ctgName");
 
-      mListView = FindViewById<ListView>(Resource.Id.categoryListView);
+            mListView = FindViewById<ListView>(Resource.Id.categoryListView);
 
 
             mItems = new List<string>();

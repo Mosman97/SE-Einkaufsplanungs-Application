@@ -42,7 +42,7 @@ namespace EInkaufsplanerSEProject
 
         void loadbtn_Click(object sender, EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(ListEditorActivity));
+            Intent intent = new Intent(this, typeof(LoadListActivity));
             this.StartActivity(intent);
         }
 
