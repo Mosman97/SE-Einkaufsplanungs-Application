@@ -65,6 +65,10 @@ namespace EInkaufsplanerSEProject
             Button addItem;
             addItem = FindViewById<Button>(Resource.Id.newItem);
             addItem.Click += addbtn_Click;
+
+            Button startpath;
+            startpath = FindViewById<Button>(Resource.Id.startpath);
+            startpath.Click += pathfinding_Click;
         }
 
         void addbtn_Click(object sender, EventArgs e)
@@ -72,6 +76,12 @@ namespace EInkaufsplanerSEProject
             FragmentTransaction transcation = FragmentManager.BeginTransaction();
             AddItem_Dialog addItem_Dialog = new AddItem_Dialog();
             addItem_Dialog.Show(transcation, "dialog fragment");
+        }
+
+        void pathfinding_Click(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(BitmapActivity));
+            this.StartActivity(intent);
         }
     }
 }

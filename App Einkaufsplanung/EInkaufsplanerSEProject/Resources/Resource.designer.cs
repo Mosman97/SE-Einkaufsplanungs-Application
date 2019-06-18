@@ -3241,8 +3241,8 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7f0a003a
 			public const int CTRL = 2131361850;
 			
-			// aapt resource value: 0x7f0a00bd
-			public const int Delete = 2131361981;
+			// aapt resource value: 0x7f0a00be
+			public const int Delete = 2131361982;
 			
 			// aapt resource value: 0x7f0a003b
 			public const int FUNCTION = 2131361851;
@@ -3277,17 +3277,17 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7f0a0069
 			public const int action_bar_title = 2131361897;
 			
-			// aapt resource value: 0x7f0a00be
-			public const int action_container = 2131361982;
+			// aapt resource value: 0x7f0a00bf
+			public const int action_container = 2131361983;
 			
 			// aapt resource value: 0x7f0a008e
 			public const int action_context_bar = 2131361934;
 			
-			// aapt resource value: 0x7f0a00c9
-			public const int action_divider = 2131361993;
+			// aapt resource value: 0x7f0a00ca
+			public const int action_divider = 2131361994;
 			
-			// aapt resource value: 0x7f0a00bf
-			public const int action_image = 2131361983;
+			// aapt resource value: 0x7f0a00c0
+			public const int action_image = 2131361984;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int action_menu_divider = 2131361795;
@@ -3304,11 +3304,11 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7f0a006b
 			public const int action_mode_close_button = 2131361899;
 			
-			// aapt resource value: 0x7f0a00c0
-			public const int action_text = 2131361984;
+			// aapt resource value: 0x7f0a00c1
+			public const int action_text = 2131361985;
 			
-			// aapt resource value: 0x7f0a00ca
-			public const int actions = 2131361994;
+			// aapt resource value: 0x7f0a00cb
+			public const int actions = 2131361995;
 			
 			// aapt resource value: 0x7f0a006c
 			public const int activity_chooser_view_content = 2131361900;
@@ -3376,8 +3376,8 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7f0a00a2
 			public const int choose_product = 2131361954;
 			
-			// aapt resource value: 0x7f0a00c8
-			public const int chronometer = 2131361992;
+			// aapt resource value: 0x7f0a00c9
+			public const int chronometer = 2131361993;
 			
 			// aapt resource value: 0x7f0a0061
 			public const int clip_horizontal = 2131361889;
@@ -3496,8 +3496,8 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7f0a0071
 			public const int icon = 2131361905;
 			
-			// aapt resource value: 0x7f0a00cb
-			public const int icon_group = 2131361995;
+			// aapt resource value: 0x7f0a00cc
+			public const int icon_group = 2131361996;
 			
 			// aapt resource value: 0x7f0a0041
 			public const int ifRoom = 2131361857;
@@ -3505,8 +3505,8 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7f0a006e
 			public const int image = 2131361902;
 			
-			// aapt resource value: 0x7f0a00c4
-			public const int info = 2131361988;
+			// aapt resource value: 0x7f0a00c5
+			public const int info = 2131361989;
 			
 			// aapt resource value: 0x7f0a0068
 			public const int italic = 2131361896;
@@ -3547,11 +3547,11 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7f0a00a3
 			public const int marketpath = 2131361955;
 			
-			// aapt resource value: 0x7f0a00cd
-			public const int masked = 2131361997;
-			
 			// aapt resource value: 0x7f0a00ce
-			public const int menu_save = 2131361998;
+			public const int masked = 2131361998;
+			
+			// aapt resource value: 0x7f0a00cf
+			public const int menu_save = 2131361999;
 			
 			// aapt resource value: 0x7f0a009c
 			public const int message = 2131361948;
@@ -3589,14 +3589,14 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7f0a0025
 			public const int normal = 2131361829;
 			
-			// aapt resource value: 0x7f0a00c6
-			public const int notification_background = 2131361990;
+			// aapt resource value: 0x7f0a00c7
+			public const int notification_background = 2131361991;
+			
+			// aapt resource value: 0x7f0a00c3
+			public const int notification_main_column = 2131361987;
 			
 			// aapt resource value: 0x7f0a00c2
-			public const int notification_main_column = 2131361986;
-			
-			// aapt resource value: 0x7f0a00c1
-			public const int notification_main_column_container = 2131361985;
+			public const int notification_main_column_container = 2131361986;
 			
 			// aapt resource value: 0x7f0a0060
 			public const int outline = 2131361888;
@@ -3628,11 +3628,11 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7f0a0055
 			public const int right = 2131361877;
 			
-			// aapt resource value: 0x7f0a00c5
-			public const int right_icon = 2131361989;
+			// aapt resource value: 0x7f0a00c6
+			public const int right_icon = 2131361990;
 			
-			// aapt resource value: 0x7f0a00c3
-			public const int right_side = 2131361987;
+			// aapt resource value: 0x7f0a00c4
+			public const int right_side = 2131361988;
 			
 			// aapt resource value: 0x7f0a000c
 			public const int save_image_matrix = 2131361804;
@@ -3742,6 +3742,9 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7f0a0056
 			public const int start = 2131361878;
 			
+			// aapt resource value: 0x7f0a00bc
+			public const int startpath = 2131361980;
+			
 			// aapt resource value: 0x7f0a005b
 			public const int stretch = 2131361883;
 			
@@ -3790,8 +3793,8 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7f0a001a
 			public const int textinput_helper_text = 2131361818;
 			
-			// aapt resource value: 0x7f0a00c7
-			public const int time = 2131361991;
+			// aapt resource value: 0x7f0a00c8
+			public const int time = 2131361992;
 			
 			// aapt resource value: 0x7f0a0023
 			public const int title = 2131361827;
@@ -3826,8 +3829,8 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7f0a0013
 			public const int transition_transform = 2131361811;
 			
-			// aapt resource value: 0x7f0a00bc
-			public const int txtName = 2131361980;
+			// aapt resource value: 0x7f0a00bd
+			public const int txtName = 2131361981;
 			
 			// aapt resource value: 0x7f0a0034
 			public const int uniform = 2131361844;
@@ -3844,8 +3847,8 @@ namespace EInkaufsplanerSEProject
 			// aapt resource value: 0x7f0a001b
 			public const int view_offset_helper = 2131361819;
 			
-			// aapt resource value: 0x7f0a00cc
-			public const int visible = 2131361996;
+			// aapt resource value: 0x7f0a00cd
+			public const int visible = 2131361997;
 			
 			// aapt resource value: 0x7f0a009d
 			public const int welcometext = 2131361949;
