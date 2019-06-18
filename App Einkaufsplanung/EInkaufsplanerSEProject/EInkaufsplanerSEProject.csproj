@@ -65,13 +65,13 @@
     <Compile Include="CategoryListViewAdapter.cs" />
     <Compile Include="Classes\Database.cs" />
     <Compile Include="Classes\ListStorer.cs" />
-    <Compile Include="Classes\LoadListActivity.cs" />
-    <Compile Include="Classes\LoadListAdapter.cs" />
     <Compile Include="Classes\Pathfinding.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\Shoppinglist.cs" />
     <Compile Include="CreateList_Dialog.cs" />
     <Compile Include="ListEditorActivity.cs" />
+    <Compile Include="LoadListActivity.cs" />
+    <Compile Include="LoadListAdapter.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MyListViewAdapter.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -185,8 +185,10 @@
     <AndroidAsset Include="Assets\Supermarket.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\layout\loadlistrow.axml" />
-    <Content Include="Resources\layout\loadlistview.axml" />
+    <AndroidResource Include="Resources\layout\loadlistrow.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\loadlistview.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
