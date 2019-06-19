@@ -52,6 +52,10 @@ namespace EInkaufsplanerSEProject.Classes
             int mapwidth = 0;
             int mapheight = 0;
 
+            Android.Graphics.Color cblack = new Android.Graphics.Color(255, 255, 255);
+            Android.Graphics.Color cred = new Android.Graphics.Color(255, 0, 0);
+            Android.Graphics.Color cgreen = new Android.Graphics.Color(0, 255, 0);
+
             mapwidth = assetmap.Width;
             mapheight = assetmap.Height;
 
@@ -61,15 +65,15 @@ namespace EInkaufsplanerSEProject.Classes
             {
                 for (int j = 0; j < mapheight; j++)
                 {
-                    if (assetmap.GetPixel(i, j) == Android.Graphics.Color.Black)
+                    if (assetmap.GetPixel(i, j) == cblack)
                     {
                         map.BlockCell(new Position(i, j));
                     }
-                    else if (assetmap.GetPixel(i, j) == Android.Graphics.Color.Red)
+                    else if (assetmap.GetPixel(i, j) == cred)
                     {
                         entrance = new Position(i, j);
                     }
-                    else if (assetmap.GetPixel(i, j) == Android.Graphics.Color.Green)
+                    else if (assetmap.GetPixel(i, j) == cgreen)
                     {
                         exit = new Position(i, j);
                     }
