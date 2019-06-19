@@ -41,9 +41,24 @@ namespace EInkaufsplanerSEProject
 
             SetContentView(Resource.Layout.listeditor);
 
-            shoppinglist = new Classes.Shoppinglist();
-            //Name
-            shoppinglist.Name = listname;
+            
+            //check if a shoppinglist-name was given
+            if (listname != null)
+            {
+                //Check if a list already exists
+                shoppinglist = Classes.ListStorer.LoadList(listname);
+                if (shoppinglist == null)
+                {
+                    //Create new shoppinglist
+                    shoppinglist = new Classes.Shoppinglist();
+                    shoppinglist.Name = listname;
+                }
+            }
+            else
+            {
+                throw new ArgumentException("Missing list name");
+            }
+            
 
             var toolbar = FindViewById<Toolbar>(Resource.Id.main_toolbar);
             SetActionBar(toolbar);
@@ -53,17 +68,23 @@ namespace EInkaufsplanerSEProject
 
             mListView = FindViewById<ListView>(Resource.Id.myListView);
 
+            mItems = new List<string>();
+            if (shoppinglist.Products != null)
+            {
+                //Produkte von Shoppinglist in mItems schreiben
+                foreach (Classes.Product item in shoppinglist.Products)
+                {
+                    mItems.Add(item.ToString());
+                }
+            }
+            
 
-
-            //Producte erstellen
-            Classes.Product weihenstephanMilch = new Classes.Product("Weihenstephan Milch", "Milch");
-            Classes.Product roggenBrot = new Classes.Product("Roggen Brot", "Brot");
-            Classes.Product pinkLadyApfel = new Classes.Product("Pink Lady Apfel", "Apfel");
-
+            /*
             mItems = new List<string>();
             mItems.Add("Weihenstephan Milch");
             mItems.Add("Roggen Brot");
             mItems.Add("Pink Lady Apfel");
+            */
 
             MyListViewAdapter adapter = new MyListViewAdapter(this, mItems);
 
@@ -85,7 +106,7 @@ namespace EInkaufsplanerSEProject
             FragmentTransaction transcation = FragmentManager.BeginTransaction();
             AddItem_Dialog addItem_Dialog = new AddItem_Dialog();
             addItem_Dialog.getName(listname);
-            
+            Classes.ListStorer.StoreList(shoppinglist);
             addItem_Dialog.Show(transcation, "dialog fragment");
         }
 

@@ -20,6 +20,7 @@ namespace EInkaufsplanerSEProject
     private ListView mListView;
     public static List<Shoppinglist> AllShoppinglists;
     private string prodName;
+    string listName;
 
     protected override void OnCreate(Bundle bundle)
     {
@@ -27,6 +28,8 @@ namespace EInkaufsplanerSEProject
 
             //Ctg-Name entpacken
             prodName = Intent.GetStringExtra("ctgName");
+            //listName entpacken
+            listName = Intent.GetStringExtra("listname");
 
             SetContentView(Resource.Layout.categorylist);
 
@@ -62,11 +65,18 @@ namespace EInkaufsplanerSEProject
             //Needs implementation to write item to list and return to Shoppinglist listview
             string auswahl = mItems[e.Position];
             //Needs to load Product
+            Classes.Product newProduct = Classes.Database.returnProduct(auswahl);
             //Load List (name = getStringExtra)
+            Classes.Shoppinglist sl = Classes.ListStorer.LoadList(listName);
             //Needs to add Product to list 
+            sl.addProduct(newProduct);
             //Store list
+            Classes.ListStorer.StoreList(sl);
             //Parse back name
+            Intent intent = new Intent(this, typeof(ListEditorActivity));
+            intent.PutExtra("listname", listName);
             //Give controll to listeditoractivity
+            this.StartActivity(intent);
         }
     }
 

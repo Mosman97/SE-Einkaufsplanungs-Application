@@ -24,20 +24,22 @@ namespace EInkaufsplanerSEProject.Classes
 
     }
 
-    public void StoreList()
+    public static void StoreList(Shoppinglist shoppinglist)
     {
-      AssetManager assets = Android.App.Application.Context.Assets;
-
+        AssetManager assets = Android.App.Application.Context.Assets;
+            
       using (StreamWriter sw = new StreamWriter(assets.Open("lists.csv")))
       {
-        foreach (Shoppinglist item in CategoryListViewActivity.AllShoppinglists)
-        {
-          sw.WriteLine(item.Name);
-          foreach (Product prod in item.Products)
-          {
-            sw.WriteLine(prod.Name + ";" + prod.Category + ";" + prod.Pos_x + ";" + prod.Pos_y);
-          }
-        }
+            if (LoadList(shoppinglist.Name) == null)
+            {
+                sw.WriteLine(shoppinglist.Name);
+                foreach (Product prod in shoppinglist.Products)
+                {
+                    sw.WriteLine(prod.Name + ";" + prod.Category + ";" + prod.Pos_x + ";" + prod.Pos_y);
+                }
+            }
+            
+        
       }
 
     }
@@ -78,6 +80,7 @@ namespace EInkaufsplanerSEProject.Classes
           {
             list = new Shoppinglist();
             list.Name = line;
+            line = sr.ReadLine();
 
             while (line.Contains(";"))
             {
@@ -88,6 +91,7 @@ namespace EInkaufsplanerSEProject.Classes
             line = sr.ReadLine();
             return list;
           }
+          line = sr.ReadLine();
         }
         return null; // Wenn die Liste nicht gefunden wurde
       }
