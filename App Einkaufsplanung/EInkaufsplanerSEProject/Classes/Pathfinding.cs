@@ -20,23 +20,31 @@ namespace EInkaufsplanerSEProject.Classes
     class Pathfinding
     {
         private List<Product> products;
+        private Shoppinglist shoppinglist;
+        private List<Position> finalpath;
         private Product[] sortedProducts;
         private Grid map;
         private Position entrance;
         private Position exit;
+        private Bitmap assetmap;
+        private Bitmap finalmap;
 
-        public Pathfinding(List<Product> products)
+        AssetManager assets = Android.App.Application.Context.Assets;
+
+        public Pathfinding(Shoppinglist p)
         {
-            this.products = products;
-            this.entrance = new Position(0, 0);
-            this.exit = new Position(9, 9);
+            this.products = p.Products;
+            finalmap = BitmapFactory.DecodeStream(assets.Open("Supermarket.bmp"));
+            assetmap = BitmapFactory.DecodeStream(assets.Open("Supermarket.bmp"));
         }
 
 
-        public void FindPath()
+        public Bitmap FindPath()
         {
             CreateMap();
             SortList();
+            CreateBitmap();
+            return finalmap;
         }
 
         private void CreateMap()
@@ -44,11 +52,8 @@ namespace EInkaufsplanerSEProject.Classes
             int mapwidth = 0;
             int mapheight = 0;
 
-            AssetManager assets = Android.App.Application.Context.Assets;
-            Bitmap map1 = BitmapFactory.DecodeStream(assets.Open("Supermarket.bmp"));
-
-            mapwidth = map1.Width;
-            mapheight = map1.Height;
+            mapwidth = assetmap.Width;
+            mapheight = assetmap.Height;
 
             map = new Grid(mapwidth, mapheight, 1.0f);
 
@@ -56,9 +61,17 @@ namespace EInkaufsplanerSEProject.Classes
             {
                 for (int j = 0; j < mapheight; j++)
                 {
-                    if (map1.GetPixel(i, j) == Android.Graphics.Color.Black)
+                    if (assetmap.GetPixel(i, j) == Android.Graphics.Color.Black)
                     {
                         map.BlockCell(new Position(i, j));
+                    }
+                    else if (assetmap.GetPixel(i, j) == Android.Graphics.Color.Red)
+                    {
+                        entrance = new Position(i, j);
+                    }
+                    else if (assetmap.GetPixel(i, j) == Android.Graphics.Color.Green)
+                    {
+                        exit = new Position(i, j);
                     }
                 }
             }
@@ -70,6 +83,7 @@ namespace EInkaufsplanerSEProject.Classes
             Position product1;
             Position product2;
             Position current = entrance;
+            Position[] tmppath;
             int pathlengthproduct1;
             int pathlengthproduct2;
             sortedProducts = products.ToArray();
@@ -97,7 +111,22 @@ namespace EInkaufsplanerSEProject.Classes
                     }
 
                 } while (!sorted);
+
+                tmppath = map.GetPath(current, new Position(sortedProducts[j].Pos_x, sortedProducts[j].Pos_y));
+                finalpath.AddRange(tmppath);
+
                 current = new Position(sortedProducts[j].Pos_x, sortedProducts[j].Pos_y);
+            }
+
+            tmppath = map.GetPath(current, exit);
+            finalpath.AddRange(tmppath);
+        }
+
+        private void CreateBitmap()
+        {
+            foreach (Position p in finalpath)
+            {
+                finalmap.SetPixel(p.X, p.Y, Android.Graphics.Color.Red);
             }
         }
     }
