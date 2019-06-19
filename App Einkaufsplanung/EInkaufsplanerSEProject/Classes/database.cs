@@ -19,7 +19,7 @@ namespace EInkaufsplanerSEProject.Classes
     class Database
     {
         /// <summary>
-        /// Nach der Eingabe was der Nutzer einkaufen will, werden alle Produkte in einer Liste zurückgegeben, die in der DAtenbank gefunden wurden
+        /// Nach der Eingabe was der Nutzer einkaufen will, werden alle Produkte in einer Liste zurückgegeben, die in der Datenbank gefunden wurden
         /// </summary>
         /// <param name="eingabe"></param>
         /// <returns></returns>
