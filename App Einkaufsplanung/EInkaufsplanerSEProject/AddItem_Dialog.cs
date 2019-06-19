@@ -15,6 +15,7 @@ namespace EInkaufsplanerSEProject
     class AddItem_Dialog : DialogFragment
     {
         EditText ctgname;
+        string Lname;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -33,10 +34,16 @@ namespace EInkaufsplanerSEProject
 
                 Intent intent = new Intent(Context, typeof(CategoryListViewActivity));
                 intent.PutExtra("ctgName", name);
+                intent.PutExtra("listname", Lname);
                 this.StartActivity(intent);
             };
 
             return view;
+        }
+
+        public void getName(string listName)
+        {
+            Lname = listName;
         }
 
     }

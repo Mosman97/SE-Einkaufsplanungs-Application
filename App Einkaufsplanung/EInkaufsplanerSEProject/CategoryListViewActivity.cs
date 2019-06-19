@@ -61,7 +61,12 @@ namespace EInkaufsplanerSEProject
         {
             //Needs implementation to write item to list and return to Shoppinglist listview
             string auswahl = mItems[e.Position];
-            Console.WriteLine(mItems[e.Position]);
+            //Needs to load Product
+            //Load List (name = getStringExtra)
+            //Needs to add Product to list 
+            //Store list
+            //Parse back name
+            //Give controll to listeditoractivity
         }
     }
 

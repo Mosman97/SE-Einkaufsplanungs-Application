@@ -16,7 +16,8 @@ namespace EInkaufsplanerSEProject
 {
     class CreateList_Dialog : DialogFragment
     {
-        
+        EditText ctgname;
+
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             base.OnCreateView(inflater, container, savedInstanceState);
@@ -27,14 +28,19 @@ namespace EInkaufsplanerSEProject
 
             button.Click += creatlist_Click;
 
+            ctgname = view.FindViewById<EditText>(Resource.Id.createName);
+
             return view;
         }
 
         private void creatlist_Click(object sender, EventArgs e)
         {
-                //Namen übergeben und Liste erstellen!
-                Intent intent = new Intent(Context, typeof(ListEditorActivity));
-                this.StartActivity(intent);
+
+            string name = ctgname.Text;
+            //Namen übergeben und Liste erstellen!
+            Intent intent = new Intent(Context, typeof(ListEditorActivity));
+            intent.PutExtra("listname",name);
+            this.StartActivity(intent);
         }
     }
 }

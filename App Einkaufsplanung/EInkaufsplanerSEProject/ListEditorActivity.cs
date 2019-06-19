@@ -17,7 +17,8 @@ namespace EInkaufsplanerSEProject
     {
         private List<string> mItems;
         private ListView mListView;
-
+        private Classes.Shoppinglist shoppinglist;
+        string listname;
         //Custom Menübar mit Save Icon
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
@@ -35,11 +36,18 @@ namespace EInkaufsplanerSEProject
         {
             base.OnCreate(bundle);
 
+            //Ctg-Name entpacken
+            listname = Intent.GetStringExtra("listname");
+
             SetContentView(Resource.Layout.listeditor);
+
+            shoppinglist = new Classes.Shoppinglist();
+            //Name
+            shoppinglist.Name = listname;
 
             var toolbar = FindViewById<Toolbar>(Resource.Id.main_toolbar);
             SetActionBar(toolbar);
-            ActionBar.Title = "Listentitel";
+            ActionBar.Title = listname;
 
 
 
@@ -73,8 +81,11 @@ namespace EInkaufsplanerSEProject
 
         void addbtn_Click(object sender, EventArgs e)
         {
+            
             FragmentTransaction transcation = FragmentManager.BeginTransaction();
             AddItem_Dialog addItem_Dialog = new AddItem_Dialog();
+            addItem_Dialog.getName(listname);
+            
             addItem_Dialog.Show(transcation, "dialog fragment");
         }
 
