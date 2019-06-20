@@ -30,7 +30,8 @@ namespace EInkaufsplanerSEProject
             bitmap = (ImageView)FindViewById(Resource.Id.marketpath);
             System.IO.Stream si1 = assets.Open("Supermarket.bmp");
             Bitmap bitmap1 = BitmapFactory.DecodeStream(si1);
-            bitmap.SetImageBitmap(bitmap1);
+            Bitmap show = Bitmap.CreateScaledBitmap(bitmap1, 1200, 1100, true);
+            bitmap.SetImageBitmap(show);
 
         }
 
