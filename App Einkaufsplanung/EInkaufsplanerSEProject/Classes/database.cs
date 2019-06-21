@@ -87,7 +87,7 @@ namespace EInkaufsplanerSEProject.Classes
                         Pos_y = csv.GetField<int>(3)
                     };
 
-                    if (name == record.Category)
+                    if (String.Equals(name,record.Name))
                     {
                         produkt = record;
                         break;
