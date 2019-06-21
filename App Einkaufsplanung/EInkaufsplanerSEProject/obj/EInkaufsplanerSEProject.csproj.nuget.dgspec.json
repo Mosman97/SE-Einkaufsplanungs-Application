@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bocker\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\EInkaufsplanerSEProject.csproj": {}
+    "C:\\Users\\kaehnyla\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\EInkaufsplanerSEProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bocker\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\EInkaufsplanerSEProject.csproj": {
+    "C:\\Users\\kaehnyla\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\EInkaufsplanerSEProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bocker\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\EInkaufsplanerSEProject.csproj",
+        "projectUniqueName": "C:\\Users\\kaehnyla\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\EInkaufsplanerSEProject.csproj",
         "projectName": "EInkaufsplanerSEProject",
-        "projectPath": "C:\\Users\\bocker\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\EInkaufsplanerSEProject.csproj",
-        "packagesPath": "C:\\Users\\bocker\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bocker\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\obj\\",
+        "projectPath": "C:\\Users\\kaehnyla\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\EInkaufsplanerSEProject.csproj",
+        "packagesPath": "C:\\Users\\kaehnyla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kaehnyla\\Documents\\GitHub\\SE-Einkaufsplanungs-Application\\App Einkaufsplanung\\EInkaufsplanerSEProject\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\bocker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kaehnyla\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
