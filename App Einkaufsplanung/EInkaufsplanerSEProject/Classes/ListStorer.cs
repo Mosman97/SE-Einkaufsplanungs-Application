@@ -35,34 +35,37 @@ namespace EInkaufsplanerSEProject.Classes
                 fs.Close();
             }
 
-            // Erst alle Shoppinglisten einlesen
-            List<Shoppinglist> Listen = new List<Shoppinglist>();
-            List<string> Names = loadListNames();
-            foreach (string nam in Names)
+            if (shoplist.Products != null)
             {
-                Listen.Add(LoadList(nam));
-            }
-
-            //Alle Listen bis auf die geänderte in die Datei schreiben
-            using (StreamWriter sw = new StreamWriter(filename))
-            {
-                foreach (Shoppinglist shp in Listen)
+                // Erst alle Shoppinglisten einlesen
+                List<Shoppinglist> Listen = new List<Shoppinglist>();
+                List<string> Names = loadListNames();
+                foreach (string nam in Names)
                 {
-                    if (shp.Name != shoplist.Name) // geänderte Datei wird nicht geschrieben
-                    {
-                        sw.WriteLine(shp.Name);
-                        foreach (Product prod in shp.Products)
-                        {
-                            sw.WriteLine(prod.Name + ";" + prod.Category + ";" + prod.Pos_x + ";" + prod.Pos_y);
-                        }
-                    }
+                    Listen.Add(LoadList(nam));
                 }
 
-                // Als letztes wird die geänderte Liste wieder in die Datei schreiben
-                sw.WriteLine(shoplist.Name);
-                foreach (Product prod in shoplist.Products)
+                //Alle Listen bis auf die geänderte in die Datei schreiben
+                using (StreamWriter sw = new StreamWriter(filename))
                 {
-                    sw.WriteLine(prod.Name + ";" + prod.Category + ";" + prod.Pos_x + ";" + prod.Pos_y);
+                    foreach (Shoppinglist shp in Listen)
+                    {
+                        if (shp.Name != shoplist.Name) // geänderte Datei wird nicht geschrieben
+                        {
+                            sw.WriteLine(shp.Name);
+                            foreach (Product prod in shp.Products)
+                            {
+                                sw.WriteLine(prod.Name + ";" + prod.Category + ";" + prod.Pos_x + ";" + prod.Pos_y);
+                            }
+                        }
+                    }
+
+                    // Als letztes wird die geänderte Liste wieder in die Datei schreiben
+                    sw.WriteLine(shoplist.Name);
+                    foreach (Product prod in shoplist.Products)
+                    {
+                        sw.WriteLine(prod.Name + ";" + prod.Category + ";" + prod.Pos_x + ";" + prod.Pos_y);
+                    }
                 }
             }
         }
