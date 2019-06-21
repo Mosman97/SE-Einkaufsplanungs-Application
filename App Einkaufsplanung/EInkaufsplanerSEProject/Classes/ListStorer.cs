@@ -35,39 +35,45 @@ namespace EInkaufsplanerSEProject.Classes
                 fs.Close();
             }
 
-            if (shoplist.Products != null)
+            //if (shoplist.Products != null)
+            //{
+            // Erst alle Shoppinglisten einlesen
+            List<Shoppinglist> Listen = new List<Shoppinglist>();
+            List<string> Names = loadListNames();
+            foreach (string nam in Names)
             {
-                // Erst alle Shoppinglisten einlesen
-                List<Shoppinglist> Listen = new List<Shoppinglist>();
-                List<string> Names = loadListNames();
-                foreach (string nam in Names)
-                {
-                    Listen.Add(LoadList(nam));
-                }
+                Listen.Add(LoadList(nam));
+            }
 
-                //Alle Listen bis auf die geänderte in die Datei schreiben
-                using (StreamWriter sw = new StreamWriter(filename))
+            //Alle Listen bis auf die geänderte in die Datei schreiben
+            using (StreamWriter sw = new StreamWriter(filename))
+            {
+                foreach (Shoppinglist shp in Listen)
                 {
-                    foreach (Shoppinglist shp in Listen)
+                    if (shp.Name != shoplist.Name) // geänderte Datei wird nicht geschrieben
                     {
-                        if (shp.Name != shoplist.Name) // geänderte Datei wird nicht geschrieben
+                        sw.WriteLine(shp.Name);
+                        if (shp.Products != null)
                         {
-                            sw.WriteLine(shp.Name);
                             foreach (Product prod in shp.Products)
                             {
                                 sw.WriteLine(prod.Name + ";" + prod.Category + ";" + prod.Pos_x + ";" + prod.Pos_y);
                             }
                         }
                     }
+                }
 
-                    // Als letztes wird die geänderte Liste wieder in die Datei schreiben
-                    sw.WriteLine(shoplist.Name);
+                // Als letztes wird die geänderte Liste wieder in die Datei schreiben
+                sw.WriteLine(shoplist.Name);
+                if (shoplist.Products != null)
+                {
                     foreach (Product prod in shoplist.Products)
                     {
                         sw.WriteLine(prod.Name + ";" + prod.Category + ";" + prod.Pos_x + ";" + prod.Pos_y);
                     }
                 }
             }
+            //}
         }
 
         public static List<string> loadListNames()
@@ -123,7 +129,7 @@ namespace EInkaufsplanerSEProject.Classes
                         list.Name = line;
                         line = sr.ReadLine();
 
-                        while (line.Contains(";"))
+                        while (line != null && line.Contains(";"))
                         {
                             string[] zeile = line.Split(';');
                             Product prod = new Product(zeile[0], zeile[1], Convert.ToInt32(zeile[2]), Convert.ToInt32(zeile[3]));

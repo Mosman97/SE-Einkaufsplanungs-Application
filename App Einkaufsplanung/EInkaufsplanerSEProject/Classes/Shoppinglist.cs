@@ -15,7 +15,7 @@ namespace EInkaufsplanerSEProject.Classes
 {
   public class Shoppinglist
   {
-    public List<Product> Products;
+    public List<Product> Products = new List<Product>();
 
     private string name_;
 
