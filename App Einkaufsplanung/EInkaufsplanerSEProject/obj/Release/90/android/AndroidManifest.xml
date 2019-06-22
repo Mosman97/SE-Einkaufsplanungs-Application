@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.EInkaufsplanerSEProject" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="27" android:targetSdkVersion="28" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:name="android.app.Application">
+    <activity android:label="BitmapActivity" android:name="md5678046646f4c662b974bed72928752a3.BitmapActivity" />
+    <activity android:label="CategoryListViewActivity" android:name="md5678046646f4c662b974bed72928752a3.CategoryListViewActivity" />
+    <activity android:label="ListEditorActivity" android:name="md5678046646f4c662b974bed72928752a3.ListEditorActivity" />
+    <activity android:label="LoadListActivity" android:name="md5678046646f4c662b974bed72928752a3.LoadListActivity" />
+    <activity android:label="@string/app_name" android:theme="@style/AppTheme" android:name="md5678046646f4c662b974bed72928752a3.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:authorities="com.companyname.EInkaufsplanerSEProject.mono.MonoRuntimeProvider.__mono_init__" />
+  </application>
+</manifest>

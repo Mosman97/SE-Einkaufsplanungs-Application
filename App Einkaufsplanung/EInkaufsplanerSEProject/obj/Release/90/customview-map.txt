@@ -1,0 +1,52 @@
+adaptive-icon;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
+adaptive-icon;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+background;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
+background;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+Button;obj\Release\90\res\layout\activity_main.xml
+Button;obj\Release\90\res\layout\additem_dialog.xml
+Button;obj\Release\90\res\layout\createlist_dialog.xml
+Button;obj\Release\90\res\layout\listeditor.xml
+Button;obj\Release\90\res\layout\listview_row.xml
+cache-path;C:\Users\bocker\Documents\GitHub\SE-Einkaufsplanungs-Application\App Einkaufsplanung\EInkaufsplanerSEProject\obj\Release\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+color;obj\Release\90\res\values\colors.xml
+color;obj\Release\90\res\values\ic_launcher_background.xml
+EditText;obj\Release\90\res\layout\additem_dialog.xml
+EditText;obj\Release\90\res\layout\createlist_dialog.xml
+external-cache-path;C:\Users\bocker\Documents\GitHub\SE-Einkaufsplanungs-Application\App Einkaufsplanung\EInkaufsplanerSEProject\obj\Release\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\bocker\Documents\GitHub\SE-Einkaufsplanungs-Application\App Einkaufsplanung\EInkaufsplanerSEProject\obj\Release\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+foreground;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
+foreground;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+ImageView;obj\Release\90\res\layout\bitmap_viewer.xml
+include;obj\Release\90\res\layout\categorylist.xml
+include;obj\Release\90\res\layout\listeditor.xml
+include;obj\Release\90\res\layout\loadlistview.xml
+item;obj\Release\90\res\menu\top_menus.xml
+item;obj\Release\90\res\values\styles.xml
+LinearLayout;obj\Release\90\res\layout\activity_main.xml
+LinearLayout;obj\Release\90\res\layout\additem_dialog.xml
+LinearLayout;obj\Release\90\res\layout\bitmap_viewer.xml
+LinearLayout;obj\Release\90\res\layout\category_row.xml
+LinearLayout;obj\Release\90\res\layout\categorylist.xml
+LinearLayout;obj\Release\90\res\layout\createlist_dialog.xml
+LinearLayout;obj\Release\90\res\layout\listeditor.xml
+LinearLayout;obj\Release\90\res\layout\listview_row.xml
+LinearLayout;obj\Release\90\res\layout\loadlistrow.xml
+LinearLayout;obj\Release\90\res\layout\loadlistview.xml
+ListView;obj\Release\90\res\layout\categorylist.xml
+ListView;obj\Release\90\res\layout\listeditor.xml
+ListView;obj\Release\90\res\layout\loadlistview.xml
+menu;obj\Release\90\res\menu\top_menus.xml
+paths;C:\Users\bocker\Documents\GitHub\SE-Einkaufsplanungs-Application\App Einkaufsplanung\EInkaufsplanerSEProject\obj\Release\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+resources;obj\Release\90\res\values\colors.xml
+resources;obj\Release\90\res\values\ic_launcher_background.xml
+resources;obj\Release\90\res\values\strings.xml
+resources;obj\Release\90\res\values\styles.xml
+string;obj\Release\90\res\values\strings.xml
+style;obj\Release\90\res\values\styles.xml
+TextView;obj\Release\90\res\layout\activity_main.xml
+TextView;obj\Release\90\res\layout\additem_dialog.xml
+TextView;obj\Release\90\res\layout\category_row.xml
+TextView;obj\Release\90\res\layout\createlist_dialog.xml
+TextView;obj\Release\90\res\layout\listview_row.xml
+TextView;obj\Release\90\res\layout\loadlistrow.xml
+Toolbar;obj\Release\90\res\layout\main_toolbar.xml
