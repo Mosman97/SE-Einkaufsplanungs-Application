@@ -113,6 +113,7 @@ namespace EInkaufsplanerSEProject
         void pathfinding_Click(object sender, EventArgs e)
         {
             Intent intent = new Intent(this, typeof(BitmapActivity));
+            intent.PutExtra("Lname", listname);
             this.StartActivity(intent);
         }
     }

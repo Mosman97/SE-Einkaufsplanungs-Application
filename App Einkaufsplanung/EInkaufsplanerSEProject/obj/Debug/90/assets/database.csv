@@ -1,0 +1,26 @@
+Category;Name;x;y
+Milch;Weihenstephan;23;8
+Milch;JA!;26;8
+Brot;Roggen;75;27
+Brot;Vollkorn;80;27
+Wurst;Lyoner;25;56
+Wurst;Leberwurst;25;64
+Käse;Emmentaler;24;27
+Käse;Gouda;28;27
+Käse;Parmesan;50;27
+Butter;Kerrygold;52;8
+Butter;Deutsche Markenbutter;54;8
+Apfel;Granny Smith;25;169
+Apfel;Topaz;30;169
+Deo;Axe;85;89
+Deo;Playboy;90;89
+Semmel;Kaisersemmel;72;34
+Semmel;Roggensemmel;72;35
+Semmel;Vollkornsemmel;72;36
+Klopapier;Zewa;74;74
+Klopapier;Softis;74;85
+Gewürze;Maggi;17;118
+Gewürze;Knorr;48;116
+Schokolade;Milka;45;143
+Schokolade;Kinderriegel;72;160
+Schokolade;Lindt;37;143

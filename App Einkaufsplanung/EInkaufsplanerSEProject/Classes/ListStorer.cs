@@ -134,8 +134,8 @@ namespace EInkaufsplanerSEProject.Classes
                             string[] zeile = line.Split(';');
                             Product prod = new Product(zeile[0], zeile[1], Convert.ToInt32(zeile[2]), Convert.ToInt32(zeile[3]));
                             list.addProduct(prod);
-                        } // Wenn die Zeile keinen ; mehr enthält beginnt eine neue Liste
-                        line = sr.ReadLine();
+                            line = sr.ReadLine();
+                        } // Wenn die Zeile keinen ; mehr enthält beginnt eine neue Liste            
                         return list;
                     }
                     line = sr.ReadLine();
