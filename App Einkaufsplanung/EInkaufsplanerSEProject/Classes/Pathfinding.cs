@@ -14,14 +14,14 @@ using RoyT.AStar;
 using System.Drawing;
 using Android.Graphics;
 using Android.Content.Res;
+using System.IO;
 
 namespace EInkaufsplanerSEProject.Classes
 {
     class Pathfinding
     {
         private List<Product> products;
-        private Shoppinglist shoppinglist;
-        private List<Position> finalpath;
+        private List<Position> finalpath = new List<Position>();
         private Product[] sortedProducts;
         private Grid map;
         private Position entrance;
@@ -29,13 +29,18 @@ namespace EInkaufsplanerSEProject.Classes
         private Bitmap assetmap;
         private Bitmap finalmap;
 
+        Android.Graphics.Color cblack = new Android.Graphics.Color(0, 0, 0);
+        Android.Graphics.Color cred = new Android.Graphics.Color(255, 0, 0);
+        Android.Graphics.Color cgreen = new Android.Graphics.Color(0, 255, 0);
+
         AssetManager assets = Android.App.Application.Context.Assets;
 
         public Pathfinding(Shoppinglist p)
         {
             this.products = p.Products;
-            finalmap = BitmapFactory.DecodeStream(assets.Open("Supermarket.bmp"));
             assetmap = BitmapFactory.DecodeStream(assets.Open("Supermarket.bmp"));
+            Bitmap tmpmap = BitmapFactory.DecodeStream(assets.Open("Supermarket.bmp"));
+            finalmap = tmpmap.Copy(tmpmap.GetConfig(), true);
         }
 
 
@@ -51,10 +56,6 @@ namespace EInkaufsplanerSEProject.Classes
         {
             int mapwidth = 0;
             int mapheight = 0;
-
-            Android.Graphics.Color cblack = new Android.Graphics.Color(255, 255, 255);
-            Android.Graphics.Color cred = new Android.Graphics.Color(255, 0, 0);
-            Android.Graphics.Color cgreen = new Android.Graphics.Color(0, 255, 0);
 
             mapwidth = assetmap.Width;
             mapheight = assetmap.Height;
@@ -128,9 +129,16 @@ namespace EInkaufsplanerSEProject.Classes
 
         private void CreateBitmap()
         {
-            foreach (Position p in finalpath)
+            int x = 0;
+            int y = 0;
+            if (finalpath != null)
             {
-                finalmap.SetPixel(p.X, p.Y, Android.Graphics.Color.Red);
+                foreach (Position p in finalpath)
+                {
+                    x = p.X;
+                    y = p.Y;
+                    finalmap.SetPixel(x, y, cred);
+                }
             }
         }
     }
